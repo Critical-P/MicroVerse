@@ -1,16 +1,35 @@
 using UnityEngine;
 
-using UnityEngine;
-
 public class CollectibleObject : MonoBehaviour
 {
-    // This function is called when the player interacts with the object
+    private Renderer rend;
+    private Color originalColor;
+    public Color highlightColor = Color.yellow; // You can change this in Inspector
+
+    private void Awake()
+    {
+        rend = GetComponent<Renderer>();
+        if (rend != null)
+            originalColor = rend.material.color;
+    }
+
+    // Called when player interacts (presses E)
     public void Interact()
     {
-        // Notify the GameManager or ScoreManager
         ScoreManager.Instance.AddScore(1);
-
-        // Destroy (make the object disappear)
         Destroy(gameObject);
     }
+
+    public void Highlight()
+    {
+        if (rend != null)
+            rend.material.color = highlightColor;
+    }
+
+    public void RemoveHighlight()
+    {
+        if (rend != null)
+            rend.material.color = originalColor;
+    }
 }
+

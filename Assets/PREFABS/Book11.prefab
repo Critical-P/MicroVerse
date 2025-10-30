@@ -14,7 +14,8 @@ GameObject:
   - component: {fileID: 54744541350457292}
   - component: {fileID: 65519299129639248}
   - component: {fileID: 8143682063049680166}
-  m_Layer: 0
+  - component: {fileID: -5160997562234126223}
+  m_Layer: 3
   m_Name: Book11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -149,3 +150,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f19718d2b919d4941bd310ff0cc3ac4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  highlightColor: {r: 0.9716981, g: 0.9625799, b: 0.16958882, a: 1}
+--- !u!222 &-5160997562234126223
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1129920448913666}
+  m_CullTransparentMesh: 1

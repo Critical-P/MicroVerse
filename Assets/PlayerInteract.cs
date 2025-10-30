@@ -5,30 +5,53 @@ public class PlayerInteract : MonoBehaviour
     public float interactRange = 3f;
     public LayerMask interactableLayer;
 
+    private CollectibleObject currentTarget; // the object currently highlighted
+
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        CheckForInteractable();
+
+        if (Input.GetKeyDown(KeyCode.E) && currentTarget != null)
         {
-            CheckInteraction();
+            currentTarget.Interact();
+            currentTarget = null;
         }
     }
 
-    void CheckInteraction()
+    void CheckForInteractable()
     {
         RaycastHit hit;
         if (Physics.Raycast(transform.position, transform.forward, out hit, interactRange, interactableLayer))
         {
-            CollectibleObject collectible = hit.collider.GetComponent<CollectibleObject>();
-            if (collectible != null)
+            CollectibleObject found = hit.collider.GetComponent<CollectibleObject>();
+
+            if (found != null)
             {
-                collectible.Interact();
+                if (currentTarget != found)
+                {
+                    ClearHighlight();
+                    currentTarget = found;
+                    currentTarget.Highlight();
+                }
+                return;
             }
+        }
+
+        // If no interactable in range or looking away, clear highlight
+        ClearHighlight();
+    }
+
+    void ClearHighlight()
+    {
+        if (currentTarget != null)
+        {
+            currentTarget.RemoveHighlight();
+            currentTarget = null;
         }
     }
 
     private void OnDrawGizmosSelected()
     {
-        // Just to visualize interaction range in the editor
         Gizmos.color = Color.yellow;
         Gizmos.DrawRay(transform.position, transform.forward * interactRange);
     }

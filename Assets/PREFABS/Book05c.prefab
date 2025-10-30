@@ -14,7 +14,8 @@ GameObject:
   - component: {fileID: 54383869262441090}
   - component: {fileID: 65253074321371104}
   - component: {fileID: -2445705744341242360}
-  m_Layer: 0
+  - component: {fileID: -6548915517592491708}
+  m_Layer: 3
   m_Name: Book05c
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -149,3 +150,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f19718d2b919d4941bd310ff0cc3ac4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  highlightColor: {r: 0.9716981, g: 0.9625799, b: 0.16958882, a: 1}
+--- !u!222 &-6548915517592491708
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1573101699869414}
+  m_CullTransparentMesh: 1
