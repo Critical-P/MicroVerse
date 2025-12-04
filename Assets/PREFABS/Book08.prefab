@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 65163948069343820}
   - component: {fileID: 767659217565785556}
   - component: {fileID: 6416939161592635543}
+  - component: {fileID: -5734682845786552776}
   m_Layer: 3
   m_Name: Book08
   m_TagString: Untagged
@@ -159,3 +160,15 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1780976947277816}
   m_CullTransparentMesh: 1
+--- !u!114 &-5734682845786552776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1780976947277816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2752df590ad638d418d64672614a846f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

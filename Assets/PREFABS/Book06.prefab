@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 65891090469939682}
   - component: {fileID: -8727285527225541818}
   - component: {fileID: -7632982012041978551}
+  - component: {fileID: 3251918814043608324}
   m_Layer: 3
   m_Name: Book06
   m_TagString: Untagged
@@ -159,3 +160,15 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1921058546356420}
   m_CullTransparentMesh: 1
+--- !u!114 &3251918814043608324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1921058546356420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2752df590ad638d418d64672614a846f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
