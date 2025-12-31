@@ -25,6 +25,7 @@ public class ScoreManager : MonoBehaviour
 
     private void UpdateUI()
     {
-        scoreText.text = "books: " + score + "/5";
+        scoreText.text =  + score + "/5";
+        if (score == 5) Destroy(gameObject);
     }
 }
