@@ -48,6 +48,7 @@ public class PowerUpInteract : MonoBehaviour
                 HideUI();
                 Destroy(gameObject);
             }
+
         }
         else if (isInRange)
         {
